@@ -6,7 +6,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class MainController {
-    @GetMapping(value = "/test")
+    @GetMapping(value = "/")
     public ModelAndView authorizationPage(){
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("main.html");
