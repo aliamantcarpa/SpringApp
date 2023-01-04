@@ -1,13 +1,15 @@
 package root.controllers;
 
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
-@RestController
+@Controller
 public class MainController {
-    @PostMapping(value = "/test/{superHuevo}")
-    public void authorizationPage(@PathVariable String superHuevo ){
-        System.out.println(superHuevo);
+    @GetMapping(value = "/test")
+    public ModelAndView authorizationPage(){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("main.html");
+        return modelAndView;
     }
 }
