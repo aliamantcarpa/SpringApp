@@ -10,7 +10,21 @@ public class MainController {
     @GetMapping(value = "/")
     public ModelAndView authorizationPage(){
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("main.html");
+        modelAndView.setViewName("login.html");
+        return modelAndView;
+    }
+
+    @PostMapping(value = "/")
+    public ModelAndView authorization(){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("login.html");
+        return modelAndView;
+    }
+
+    @GetMapping(value = "/registration")
+    public ModelAndView registrationPage(){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("reg.html");
         return modelAndView;
     }
 
@@ -28,8 +42,4 @@ public class MainController {
         return "redirect:/test";
     }
 
-    @GetMapping("/login")
-    public String login(){
-        return "login";
-    }
 }
