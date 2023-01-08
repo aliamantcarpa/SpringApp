@@ -24,7 +24,7 @@ public class SecurityConfiguration {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests()
                 .anyRequest().authenticated()
-                .and().formLogin().loginPage("/login").usernameParameter("username").passwordParameter("password")
+                .and().formLogin()
                 .defaultSuccessUrl("/").permitAll();
         return http.build();
     }
