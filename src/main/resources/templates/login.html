@@ -1,12 +1,12 @@
-<link href='css/reg_log_button.css' rel='stylesheet' type='text/css'>
+<link media="all" rel="stylesheet" th:href="@{/css/reg_log_button.css}" type="text/css"/>
 
 <div class="login">
     <h2 class="active"> sign in </h2>
-    <form method ='POST' action="/login">
+    <form th:method="POST" th:action="@{/login}" >
 
 
 
-        <input type="text" class="text" name="username" autofocus="true">
+        <input type="text" class="text" name="username" placeholder="username" autofocus="true">
 
         <br>
 
@@ -14,7 +14,7 @@
 
         <br>
 
-        <input type="password" class="text" name="password">
+        <input type="password" class="text" name="password"  placeholder="password">
 
         <br>
 

@@ -10,7 +10,7 @@ public class MainController {
     @GetMapping(value = "/")
     public ModelAndView authorizationPage(){
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("login.html");
+        modelAndView.setViewName("testpage.html");
         return modelAndView;
     }
 
@@ -36,10 +36,19 @@ public class MainController {
         return "test_page";
     }
 
+
+
     @PostMapping("/test")
     public String test3(@ModelAttribute("user") User user){
         System.out.println(user.getUsername());
         return "redirect:/test";
     }
 
+    /*
+    @GetMapping("/login")
+    public String loginPage(){
+        return "login";
+    }
+
+ */
 }
