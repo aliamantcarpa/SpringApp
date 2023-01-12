@@ -1,0 +1,44 @@
+<link media="all" rel="stylesheet" th:href="@{/css/reg_log_button.css}" type="text/css"/>
+
+<div class="login">
+    <h2 class="active"> sign in </h2>
+    <form th:method="POST" th:action="@{/login}" >
+
+
+
+        <input type="text" class="text" name="username" placeholder="username" autofocus="true">
+
+        <br>
+
+        <span>username</span>
+
+        <br>
+
+        <input type="password" class="text" name="password"  placeholder="password">
+
+        <br>
+
+        <span>password</span>
+
+        <br>
+
+        <input type="checkbox" id="checkbox-1-1" class="custom-checkbox" />
+        <label for="checkbox-1-1">Keep me Signed in</label>
+
+        <button type="submit" class="signin">
+            Sign In
+        </button>
+
+        <br>
+
+        <button formmethod="GET" formaction="/registration" class="signin">
+            Sign Up
+        </button>
+
+
+        <hr>
+
+        <a href="#">Forgot Password?</a>
+    </form>
+
+</div>
