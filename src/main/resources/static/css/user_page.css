@@ -1,0 +1,82 @@
+
+.mainBlock {
+    position: relative;
+    width: 50%;
+    margin: auto;
+}
+.userInfo {
+    position: relative;
+    height: 200px;
+    width: 100%;
+    margin: auto;
+    padding: 50px 50px;
+    background: no-repeat center center #505050;
+    background-size: cover;
+    box-shadow: 0px 30px 60px -5px #000;
+}
+nav {
+    position: fixed;
+    height: 180px;
+    border-radius: 20px;
+    margin-left: 11%;
+    margin-top: 50px;
+    width: 170px;
+    padding: 10px 10px;
+    background: no-repeat left center #505050;
+    background-size: cover;
+    box-shadow: 0px 30px 60px -5px #000;
+}
+
+.ribbon{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    height: 10000px;
+    padding: 50px 50px;
+    background: no-repeat center center #505050;
+    background-size: cover;
+    box-shadow: 0px 30px 60px -5px #000;
+}
+.main-photo{
+    width: 200px;
+    height: 200px;
+    border-radius: 50px;
+    float: left;
+}
+label{
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    font-size: 20px;
+}
+
+.name{
+    font-size: 35px;
+}
+.status{
+    color: #aaa;
+    font-size: 15px;
+}
+
+.info{
+    border-top: 4px solid #1161ed;
+    width: 400px;
+    height: 100%;
+    float: left;
+    padding: 10px;
+    padding-left: 30px;
+}
+.nav-link{
+    width: 100%;
+    padding: 5px;
+    float: top;
+    color: #fff;
+    border: #1161ed;
+    border-bottom: 2px solid #1161ed;
+    transition: all 0.2s ease-in-out;
+}
+.nav-link:hover{
+    border: 2px solid #1161ed;
+    border-radius: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}

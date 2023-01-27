@@ -27,6 +27,12 @@ public class MainController {
         modelAndView.setViewName("reg.html");
         return modelAndView;
     }
+    @GetMapping(value = "/my_page")
+    public ModelAndView myPage(){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("user_page.html");
+        return modelAndView;
+    }
 
     @GetMapping("/test")
     public String test2(Model model){
