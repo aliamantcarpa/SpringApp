@@ -9,5 +9,12 @@
       <jdbc-url>jdbc:h2:file:../SocialWeb/db/test</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="cwdb@176.57.218.87" uuid="8b930a85-9709-4775-93cc-93edd7bdefc9">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://176.57.218.87:5432/cwdb</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

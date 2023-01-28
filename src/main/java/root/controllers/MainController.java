@@ -1,5 +1,8 @@
 package root.controllers;
 
+import org.apache.tomcat.util.http.parser.Authorization;
+import org.springframework.security.core.context.SecurityContext;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -11,6 +14,14 @@ public class MainController {
     public ModelAndView authorizationPage(){
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("testpage.html");
+        return modelAndView;
+    }
+
+    @GetMapping(value = "/exit")
+    public ModelAndView logout(){
+        SecurityContextHolder.getContext().getAuthentication().setAuthenticated(false);
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("login.html");
         return modelAndView;
     }
 
@@ -30,7 +41,10 @@ public class MainController {
     @GetMapping(value = "/my_page")
     public ModelAndView myPage(){
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("user_page.html");
+        if(SecurityContextHolder.getContext().getAuthentication().isAuthenticated())
+            modelAndView.setViewName("user_page.html");
+        else
+            modelAndView.setViewName("login.html");
         return modelAndView;
     }
 

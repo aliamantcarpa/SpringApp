@@ -25,13 +25,20 @@ public class SecurityConfiguration {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http.authorizeHttpRequests().requestMatchers("/*").authenticated()
-                .anyRequest().authenticated()
-                .and().formLogin().loginPage("/login")
-                .loginProcessingUrl("/login")
-                .usernameParameter("username")
-                .passwordParameter("password")
-                .defaultSuccessUrl("/").permitAll();
+        http
+                .authorizeHttpRequests()
+                    .requestMatchers("/*")
+                    .authenticated()
+                    .anyRequest()
+                    .authenticated()
+                .and()
+                    .formLogin()
+                    .loginPage("/login")
+                    .loginProcessingUrl("/login")
+                    .usernameParameter("username")
+                    .passwordParameter("password")
+                    .defaultSuccessUrl("/").permitAll();
+
         return http.build();
     }
 
