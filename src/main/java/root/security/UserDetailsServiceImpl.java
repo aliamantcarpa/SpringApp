@@ -1,6 +1,5 @@
 package root.security;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -11,11 +10,11 @@ import root.controllers.User;
 import java.util.ArrayList;
 
 @Service
-class UserDetailsServiceImpl implements UserDetailsService {
+public class UserDetailsServiceImpl implements UserDetailsService {
     /*
-        @Autowired
-        private UserRepository userRepository;
-      */
+    @Autowired
+    private UserRepository userRepository;
+  */
     private ArrayList<User> users = new ArrayList<User>();
 
 
